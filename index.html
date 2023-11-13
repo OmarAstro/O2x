@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Random Name Selector</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      text-align: center;
+      margin-top: 100px;
+      background-image: url(landing2.jpg);
+    }
+    button {
+      padding: 10px 20px;
+      font-size: 18px;
+      margin-top: 20px;
+      cursor: pointer;
+    }
+    button:hover {
+      color: white;
+      background-color: rgb(47, 102, 219);
+      transition: 0.3s;
+    }
+    .red{
+      color: rgb(142 199 249);
+      font-size: xx-large;
+      font-weight: bold;
+    }
+  </style>
+</head>
+<body>
+  <h1>Random Name Selector</h1>
+  <p class="red" id="randomName"></p>
+  <button onclick="selectRandomName()">Select Random Name</button>
+
+  <script>
+    function selectRandomName() {
+      var names = ["تسويق", "محاسبه", "لوجستيات", "قانون", "اقتصاد"];
+      var randomIndex = Math.floor(Math.random() * names.length);
+      var selectedName = names[randomIndex];
+      document.getElementById('randomName').innerText = "Selected Name: " + selectedName;
+    }
+  </script>
+</body>
+</html>
